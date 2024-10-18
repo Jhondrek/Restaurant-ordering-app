@@ -10,49 +10,57 @@
         <script src="https://kit.fontawesome.com/0f7bae20d3.js" crossorigin="anonymous"></script>
     </head>
 
-    <body>
-        
-        <header>
-            <h1>David's Diner</h1>
-            <p>The best burgers and pizza in town</p>
-        </header>
+    <body >
+        <div id="opacity-div">
+            <header>
+                <h1>David's Diner</h1>
+                <p>The best burgers and pizza in town</p>
+            </header>
 
-        <main id="menu-items-container">
-            
+            <main id="menu-items-container">
+                
 
-        </main>
+            </main>
 
-        <section class="bill-container">
-
-            <h2>Your order</h2>
-
-            <div class="bill-items-container">
-
-                <div class="items-container">
-                    <p>Pizza</p>
-                    <button>remove</button>
-                    <p class="bill-price">$14</p>
-                </div>
-
-                <div class="total">
-                    <p>Total price:</p>
-                    <p>$26</p>
-                </div>
-
+            <div id="success-message" class="success-message">
+                <p  >Thank you for choosing us, your order is on its way!</p>
+                <button class="complete-order-btn btn" id="place-another-order-btn">Place another order</button>
             </div>
+            
+            <section class="bill-section" id="bill-section">
 
-            <button>Complete order</button>
+                <h2 class="bill-title">Your order</h2>
 
-        </section>
+                <div class="bill-items-container" id="bill-items-container">
 
-        <Section class="payment-information-container">
-            <h2>Enter card details</h2>
-            <input type="text">
-            <input type="number">
-            <input type="number">
-            <button>Pay</button>
-        </Section>
 
+                </div>
+
+                <section class="final-bill" id="final-bill">
+            
+                    <div class="total-container" id="total-container">
+                        
+                    </div>
+        
+                    <button class="complete-order-btn btn" id="complete-order-btn">Complete order</button>
+                    
+                </section>
+                
+            </section>
+
+        </div>   
+
+            <form class="payment-information-container"
+            id="payment-information-container">
+                <h2>Enter card details</h2>
+                <input type="text" placeholder="Enter your name" required>
+                <input type="number" placeholder="Enter card number" required>
+                <input type="number" placeholder="Enter cvv" required>
+                <input type="submit" class="form-btn" id="submit-btm"></input>
+                <button class="btn go-back-btn" id="go-back-btn">Back</button>
+
+            </form>
+        
         <script src="index.js" type="module"></script>
         
     </body>
