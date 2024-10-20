@@ -252,6 +252,8 @@ main{
     border: none;
     background-color: whitesmoke;
     cursor: pointer;
+    font-weight: 600;
+    font-size: 0.7rem;
 }
 
 .hide{
