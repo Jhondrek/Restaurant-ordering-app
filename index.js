@@ -12,13 +12,15 @@ const goBackBtn = document.getElementById("go-back-btn")
 const placeAnotherOrderBtn = document.getElementById("place-another-order-btn")
 //Listeners
 
+// Si al darle click al elemento tiene un id renderice ese elemento en purchase items
 menuItemsContainer.addEventListener("click", (e)=>{
-    console.log(e.target.dataset.a)
+    console.log(e.target.id)
     if(e.target.id){
         renderPurchaseItems(e.target.id)
     }
     
 })
+
 
 goBackBtn.addEventListener("click", function(e){
     e.preventDefault()
@@ -92,9 +94,10 @@ function renderMenu(){
 
 }
 
+// Searches the element in the menu that has the same id as the one clicked and adds it to the purchase items section
 function renderPurchaseItems(elementId){
     let purchaseHtml = ""
-    let itemPrime = 0
+    let itemPrice = 0
     console.log( elementId)
     menuArray.forEach((dish)=>{
         if(elementId == dish.id){
@@ -103,14 +106,14 @@ function renderPurchaseItems(elementId){
                     <button>remove</button>
                     <p class="bill-price">$${dish.price}</p>
                 </div>`
-                itemPrime = dish.price
+                itemPrice = dish.price
             }
         
     })
     billSection.classList.add("display-final-bill")
 
     billItemsContainer.insertAdjacentHTML("beforeend", purchaseHtml)
-    renderBillTotal(itemPrime)
+    renderBillTotal(itemPrice)
 }
 
 function renderBillTotal(newPriceToRender){
